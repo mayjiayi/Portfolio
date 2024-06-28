@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 /* Navigation Bar Styles */
 
 .NavBar ul {
@@ -21,4 +17,15 @@
 
 .Nav-link:hover {
   background-color: grey;
+}
+
+/* Home Page */
+#home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  justify-content: center;
+  align-items: center; 
 }
