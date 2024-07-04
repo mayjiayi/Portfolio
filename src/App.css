@@ -1,31 +1,217 @@
-/* Navigation Bar Styles */
+:root {
+  --sand: #f8ecc2;
+  --sea: #065e75;
+  --orange: #ff6347;
+}
 
-.NavBar ul {
-  padding: 0;
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#about, #projects {
+  background: var(--sea);
+}
+
+/* Home Page */
+#home {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: var(--sand);
+  z-index: 1;
+}
+
+.intro-image {
+  display: flex;
+  position: relative;
+  top: 25%;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.intro,
+.image {
+  padding: 0 5vw;
+}
+
+.intro {
+  position: relative;
+  top: 10%;
+}
+
+.intro-name {
+  flex: 1;
+}
+
+.intro-name p,
+.intro-description .static-txt,
+.intro-description .dynamic-txt {
+  font-size: 4.5vw;
+  margin: 0;
+}
+
+.intro-description {
+  display: inline-flex;
+}
+
+.intro-description .dynamic-txt {
+  margin-left: 1.5vw;
+  color: var(--orange);
+}
+
+.dynamic-txt {
+  position: relative;
+}
+
+.dynamic-txt::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--sand);
+  border-left: 2px solid;
+  animation: typing 4s steps(14, end) infinite, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    left: 0;
+    width: 100%;
+  }
+  40% {
+    left: 100%;
+    width: 20%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+    margin-left: 1px;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.image img {
+  width: 25vw;
+  max-width: 300px;
+  border-radius: 50%;
+  transform: scale(1.2);
+  z-index: 6;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg);
+  background-size: 900px 200px;
+  animation: animate 10s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.25s);
+}
+
+.wave#wave1 {
+  z-index: 1;
+  background-position-x: 200px;
+}
+
+.wave#wave2 {
+  z-index: 1;
+  background-position-x: 500px;
+}
+
+.wave#wave3 {
+  z-index: 1;
+  background-position-x: 300px;
+}
+
+.wave#wave4 {
+  z-index: 1;
+  background-position-x: 100px;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+}
+
+/* Navigation Bar Styles */
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--sand);
+  width: 100vw;
+}
+
+#navbar ul {
+  padding: 10px 0;
+  margin: 0;
   list-style: none;
   display: flex;
   gap: 20px;
   justify-content: center;
 }
 
-.Nav-link {
+#navbar li {
+  padding: 5px;
+  margin: 5px;
+  transition: 0.3s ease;
+}
+
+#navbar a {
   text-decoration: none;
-  color: inherit;
+  color: black;
   font-weight: bold;
-  padding: 10%;
+  transition: 0.3s ease;
 }
 
-.Nav-link:hover {
-  background-color: grey;
+#navbar li:hover {
+  transform: scale(1.5);
 }
 
-/* Home Page */
-#home {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+#navbar a:hover {
+  color: var(--orange);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* About Page */
+
+#about h1 {
+  margin: 0;
   text-align: center;
-  justify-content: center;
-  align-items: center; 
+}
+
+/* Projects Page */
+
+#projects h1 {
+  margin: 0;
+  text-align: center;
 }

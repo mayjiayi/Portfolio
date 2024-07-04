@@ -1,6 +1,7 @@
 const NavBar = () => {
+  
   return (
-    <nav className="NavBar">
+    <nav id="navbar" >
       <ul>
         <li>
           <a href="#home">Home</a>

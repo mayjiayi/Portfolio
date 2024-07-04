@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/Projects';
 import NotFoundPage from './pages/NotFoundPage';
+import Script from './Script';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <NavBar/>
         <AboutPage/>
         <ProjectsPage/>
+        <Script />
     </div>
   );
 }
