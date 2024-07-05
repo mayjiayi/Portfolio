@@ -1,5 +1,5 @@
 :root {
-  --sand: #f8ecc2;
+  --sand: #FFF8D4;
   --sea: #065e75;
   --orange: #ff6347;
 }
@@ -17,7 +17,8 @@ html {
   scroll-behavior: smooth;
 }
 
-#about, #projects {
+#about,
+#projects {
   background: var(--sea);
 }
 
@@ -81,7 +82,7 @@ html {
   width: 100%;
   background: var(--sand);
   border-left: 2px solid;
-  animation: typing 4s steps(14, end) infinite, blink 0.75s step-end infinite;
+  animation: typing 4s steps(14, end) infinite, blink 2s step-end infinite;
 }
 
 @keyframes typing {
@@ -101,7 +102,7 @@ html {
 }
 
 @keyframes blink {
-  50% {
+  70% {
     border-color: transparent;
   }
 }
@@ -166,17 +167,16 @@ html {
 }
 
 #navbar ul {
-  padding: 10px 0;
+  padding: 1% 0;
   margin: 0;
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 2%;
   justify-content: center;
 }
 
 #navbar li {
-  padding: 5px;
-  margin: 5px;
+  margin: 1%;
   transition: 0.3s ease;
 }
 
