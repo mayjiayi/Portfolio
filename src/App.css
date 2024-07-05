@@ -122,31 +122,31 @@ html {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 25%;
+  min-height: 35%;
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg);
-  background-size: 100% 100%;
+  background-size: cover;
   animation: animate 10s ease-in-out infinite;
   animation-delay: calc(var(--i) * 0.25s);
 }
 
 .wave#wave1 {
   z-index: 1;
-  background-position-x: 200px;
+  background-position-x: 800px;
 }
 
 .wave#wave2 {
   z-index: 1;
-  background-position-x: 500px;
+  background-position-x: 400px;
 }
 
 .wave#wave3 {
   z-index: 1;
-  background-position-x: 300px;
+  background-position-x: 600px;
 }
 
 .wave#wave4 {
   z-index: 1;
-  background-position-x: 100px;
+  background-position-x: 200px;
 }
 
 @keyframes animate {
@@ -209,8 +209,6 @@ html {
 #about h1 {
   margin: 0;
   text-align: center;
-  
-  
 }
 
 /* Projects Page */
