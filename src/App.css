@@ -289,6 +289,30 @@ html {
   background-clip: text;
 }
 
+.project-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2%;
+  width: auto;
+  height: auto;
+  box-shadow: 5px 5px 20px grey;
+  overflow: hidden;
+}
+
+.project-container img {
+  width: 500px;
+  height: auto;
+}
+
+.project-description {
+  height: auto;
+  width: auto;
+  padding: 3%;
+  box-sizing: border-box;
+  position: absolute
+}
+
 /* Responsiveness */
 @media only screen and (max-width: 600px) {
   .intro-image {
